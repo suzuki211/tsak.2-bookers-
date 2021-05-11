@@ -1,13 +1,15 @@
 <body>
     <p id="notice"></p>
- <p>
-  <strong>Title:</strong>
-  <%= @book.title %>
- </p>
- <p>
-  <strong>Body:</strong>
-  <%= @book.body %>
- </p>
-  <%= link_to "編集", edit_book_path(@book) %>
-  <%= link_to "削除", book_path(@book), method: :delete %>
+  <p>
+   <strong>Title:</strong>
+   <%= @book.title %>
+  </p>
+  <p>
+   <strong>Body:</strong>
+   <%= @book.body %>
+  </p>
+  <ul class="main2">
+   <li><%= link_to "編集", edit_book_path(@book) %></li>
+   <li><a href="/books">Back</a></li>
+  </ul>
 </body>
