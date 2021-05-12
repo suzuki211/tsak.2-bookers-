@@ -28,11 +28,28 @@
     margin: 33px;
   }
   
-.main2 {
-  margin: 0px
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+.main1{
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 33px;
 }
 
 .main2 li{
   display: inline-block;
   margin-right: auto
 }
+
+.field{
+  margin-bottom: 10px;
+}
+
+.field1{
+  margin: 0
+}
+

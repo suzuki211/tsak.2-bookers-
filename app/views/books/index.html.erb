@@ -1,5 +1,5 @@
 <body>
-    <p id="notice"></p>
+  <p id="notice"><%= notice %></p>
 
    <h1>Books</h1>
 
@@ -21,16 +21,24 @@
       </tr>
      <% end %>
   </table>
-  <h2>New book</h2>
-  <%= form_with model:@book, local:true do |f| %>
+  <div>
+   <h2>New book</h2>
+  　<% if @book.errors.any? %>
+   　<%= @book.errors.count %>error prohibited this book from being saved:
+  　 <% @book.errors.full_messages.each do |message| %>
+    　 <%= message %>
+  　 <% end %>
+　  <% end %>
+    <%= form_with model:@book, local:true do |f| %>
     <div class="field">
-     <h4>title</h4>
+     <h4 class="field1">title</h4>
      <%= f.text_field :title %>
     </div>
     <div class="field">
-     <h4>Body</h4>
+     <h4 class="field1" >Body</h4>
      <%= f.text_area :body %>
     </div>
-    <%= f.submit '投稿' %>
-  <% end %>
+    <%= f.submit 'Create Book' %>
+    <% end %>
+  </div>
 </body>
